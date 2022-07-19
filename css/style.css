@@ -1,0 +1,749 @@
+/* Parametros */
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;700;800&display=swap");
+
+/* variables*/
+:root {
+  /*Tipografias*/
+  --fuente-unico: "Arima Madurai", cursive;
+  --peso-titulo: 400;
+  --peso-cuerpo: 300;
+  --peso-detalle: 200;
+  --peso-grande: 500;
+  --peso-extra-grande: 700;
+  --size-h1: 19px;
+  --size-h2: 18px;
+  --size-h3: 15px;
+  --size-cuerpo: 14px;
+  /* Colores */
+  --color-principal: #000;
+  --color-secundario: #414141;
+  --color-blanco: #ffffff;
+  --color-detalle: #e8e7e8;
+  --color-button: #e4bebe;
+  --color-resalt: #563d3d;
+
+  /*estructura*/
+  --header-height: 80px;
+  --padding-web: 4%;
+}
+
+/* Normalizadores */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fuente-titulo);
+  font-weight: var(--peso-titulo);
+}
+
+h1,
+h4 {
+  font-size: var(--size-h1);
+  color: var(--color-principal);
+}
+
+h2,
+h5 {
+  font-size: var(--size-h2);
+  color: var(--color-secundario);
+}
+
+h3,
+h6 {
+  font-size: var(--size-h3);
+  color: var(--color-principal);
+}
+
+body {
+  background-color: var(--color-blanco);
+}
+
+html{
+    scroll-behavior: smooth;
+  }
+
+ul {
+  list-style: none;
+}
+
+p {
+  color: var(--color-principal);
+  font-weight: var(--peso-cuerpo);
+  font-size: var(--size-cuerpo);
+}
+
+fieldset {
+  border: none;
+}
+
+iframe {
+  border: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+/* Marco */
+.marco {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+}
+
+/*navigation bar*/
+.link {
+  color: var(--color-principal);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-family: var(--fuente-unico);
+  font-weight: var(--peso-grande);
+  text-decoration: none;
+}
+
+#links {
+  width: 100%;
+  height: 100px;
+  background: var(--color-blanco);
+  font-size: 1.1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  flex-direction: row;
+  overflow: hidden;
+  /*position*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  /*flex*/
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link:hover {
+ color: #9d7373;
+}
+
+/*logo*/
+
+.logo {
+  width: 10%;
+  position: fixed;
+  top: -15px;
+  left: 50px;
+  margin: auto;
+  z-index: 2000;
+}
+
+/*title and cover*/
+.initial-text {
+  width: 100%;
+  font-family: "Arima Madurai", cursive;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /*flex*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.initial-text h1{
+    font-size: 100px;
+    font-weight: var(--peso-grande);
+    margin-top: 140px;
+    letter-spacing: 0.1rem;
+}
+
+
+.cover {
+  width: 100%;
+  object-fit: cover;
+  margin-top: 40px;
+}
+
+/*About*/
+.main-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+width: 100%;
+/*flex*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  padding: 2rem;
+  /*flex*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i img {
+  width: 3.5em;
+  height: 3.5em;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.features {
+  display: block;
+  width: 90%;
+  margin: 30px auto 0 auto;
+}
+
+
+/*three boxes */
+.flex-container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem;
+  margin: 5px auto auto auto;
+}
+
+.offer {
+  width: calc(100% / 3);
+  border: 1px solid hsla(0, 0%, 80%, 0.5);
+  border-radius: 3px;
+  margin: 30px;
+  padding: 1rem;
+  /*flex*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offer img{
+    width: 90%;
+}
+
+ul:last-of-type {
+  flex-grow: 1;
+}
+
+.bullet-points {
+  font-family: "Arima Madurai", cursive;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.2;
+  list-style-type: circle;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  padding: 0.5rem;
+}
+
+.box-title {
+  font-family: "Arima Madurai", cursive;
+  font-size: 23px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: hsl(0, 0%, 30%);
+}
+
+.btn {
+  font-family: "Arima Madurai", cursive;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin: 15px 0 auto 0;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 3px;
+  outline: none;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    to left,
+    #c19b9b 0%,
+    #eccfcf 50%,
+    #ddb1b1 100%
+  );
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-position: right center;
+  cursor: pointer;
+}
+
+.btn:active {
+  background: hsl(0, 0%, 90%);
+}
+
+/*contact form*/
+.form-group {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+#form {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  outline: none;
+  background: var(--color-detalle);
+  border-radius: 10px;
+  flex-direction: column;
+  margin: 5px auto 50px auto;
+  /*flex*/
+  display: flex;
+  justify-content: center;
+}
+
+#contact-title {
+  font-family: var(--fuente-unico);
+  font-weight: var(--peso-extra-grande);
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  color: hsl(0, 0%, 30%);
+  margin: 0.7em 0em 0.4em 0em;
+}
+
+#contact-call-action {
+  font-family: var(--fuente-unico);
+  font-weight: var(--peso-extra-grande);
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 30%);
+  margin-bottom: 1em;
+}
+
+#free {
+  color: hsl(0, 30%, 75%);
+}
+
+.form-control-input {
+  width: 90%;
+  height: 2.5em;
+  padding: 0.8em;
+  font-family: var(--fuente-unico);
+  font-weight: var(--peso-cuerpo);
+  font-size: 1rem;
+  border-radius: 7px;
+  border-style: hidden;
+  outline: none;
+}
+
+#message {
+  width: 90%;
+  min-height: 100px;
+  font-family: var(--fuente-unico);
+  font-weight: var(--peso-cuerpo);
+  font-size: 1rem;
+  padding: 10px;
+  resize: vertical;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.gradient-btn {
+  display: block;
+  color: white;
+  font-family: inherit;
+  font-weight: var(--peso-extra-grande);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  outline: none;
+  border: none;
+  margin-bottom: 0.7em;
+  padding: 1em 6em;
+  border-radius: 5px;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    to left,
+    #c19b9b 0%,
+    #eccfcf 50%,
+    #ddb1b1 100%
+  );
+  transition: 0.5s;
+}
+
+.gradient-btn:hover {
+  background-position: right center;
+  cursor: pointer;
+}
+
+.gradient-btn:active {
+  background: hsl(0, 0%, 80%);
+}
+
+/*footer*/
+footer ul {
+  height: 70px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  list-style-type: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  /*flex*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 2em;
+  height: 2em;
+  color: var(--color-resalt);
+}
+
+.social-icons {
+  width: 250px;
+  text-align: center;
+}
+
+
+#made-by {
+  width: 250px;
+  text-align: right;
+  color: var(--color-resalt);
+}
+
+#photo-credit {
+    width: 250px;
+    text-align: left;
+    color: var(--color-resalt);
+}
+
+/* Responsive */
+/*tablet*/
+@media screen and (max-width: 768px) {
+  .nav-link {
+    font-size: 0.8em;
+    padding: 1rem 2rem;
+  }
+
+  .main-container {
+    width: 100vw;
+    padding: 0;
+    margin: -40px 0 -30px 0;
+  }
+
+  .flex-container {
+    width: 95vw;
+    margin-top: -20px;
+  }
+
+  .offer {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .bullet-points {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .header-text h1 {
+    font-size: 3rem;
+  }
+
+  .header-text p {
+    font-size: 1rem;
+  }
+
+  .box-title {
+    font-size: 1.6rem;
+  }
+
+  #email-submit {
+    margin: -40px 20px 0 20px;
+  }
+
+  #contact-title {
+    font-size: 1.5rem;
+  }
+
+  #contact-call-action {
+    font-size: 0.9rem;
+  }
+
+  footer ul li {
+    padding: 0 2px;
+    height: 40px;
+  }
+
+  .social-icons {
+    margin-top: 4px;
+    margin-bottom: -3px;
+    text-align: center;
+  }
+
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 110px;
+  }
+
+  #photo-credit,
+  #made-by {
+    text-align: center;
+  }
+
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/*mobile*/
+@media screen and (max-width: 600px) {
+  section h1 {
+    padding: 0.1rem;
+    margin: 0;
+  }
+
+  .header-text {
+    margin-top: 55px;
+  }
+
+  #header-img {
+    display: none;
+  }
+
+  .main-container {
+    width: 95vw;
+    padding: 0;
+    margin-top: -30px;
+    margin-bottom: -20px;
+  }
+
+  .text {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .header-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-text p {
+    font-size: 0.9rem;
+  }
+
+  .box-title {
+    font-size: 1.4rem;
+  }
+
+  .bullet-points {
+    font-size: 0.9rem;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  .offer {
+    width: 80vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .bullet-points {
+    line-height: 1;
+  }
+
+  #email-submit {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #form {
+    margin-top: 50px;
+  }
+
+  .form-group {
+    padding: 1rem;
+  }
+
+  footer {
+    margin-top: -20px;
+  }
+
+  footer ul {
+    height: 110px;
+  }
+
+  footer ul li {
+    padding: 0 2px;
+    height: 40px;
+  }
+
+  .social-icons {
+    margin-top: 3px;
+    margin-bottom: -2px;
+    text-align: center;
+  }
+
+  #made-by,
+  #photo-credit {
+    text-align: center;
+  }
+
+  /*hamburger menu*/
+
+  #nav-bar {
+    height: auto;
+    position: fixed;
+    background: white;
+    left: 0;
+    width: 250px;
+    margin-top: 50px;
+    transform: translateX(-250px);
+  }
+
+  #links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: auto;
+    max-width: 50vw;
+    overflow: hidden;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    display: block;
+    text-align: center;
+    margin: 1px;
+    background: hsla(0, 0%, 90%, 0.5);
+    width: auto;
+    font-weight: 700;
+  }
+
+  .nav-link:hover {
+    background: hsla(0, 0%, 95%, 0.5);
+  }
+
+  .nav-link:active {
+    background: hsla(0, 0%, 98%, 0.3);
+  }
+
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #menu-wrap {
+    position: fixed;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: white;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ #nav-bar {
+    transform: translateX(0px);
+  }
+
+  .hamburger-menu {
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 17px;
+    left: 25px;
+    height: 25px;
+    width: 25px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .line {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: black;
+  }
+
+  .line:nth-child(2) {
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 3px;
+  }
+
+  .line:nth-child(1) {
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .line:nth-child(3) {
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 3px;
+  }
+
+  input[type="checkbox"]:checked ~ .hamburger-menu > .line:nth-child(2) {
+    box-sizing: border-box;
+    opacity: 0;
+  }
+
+  input[type="checkbox"]:checked ~ .hamburger-menu > .line:nth-child(1) {
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+  }
+
+  input[type="checkbox"]:checked ~ .hamburger-menu > .line:nth-child(3) {
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+  }
+}
